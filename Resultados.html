@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Resultados</title>
+  </head>
+
+  <body>
+    <h3>Resultados</h3>
+
+    <div id="Resultados"></div><br>
+    <a href="FormularioHtml.html">Volver al formulario</a>
+  </body>
+
+  <script>
+    const resDiv = document.getElementById("Resultados")
+    new URLSearchParams(window.location.search).forEach((val, name) => {
+      resDiv.append(`${name}: ${val}`)
+      resDiv.append(document.createElement('br'))
+    })
+  </script>
+</html>
